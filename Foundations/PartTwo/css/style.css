@@ -1,0 +1,58 @@
+body{
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255,1), rgba(224,224,224,1));
+	background: -o-linear-gradient(bottom, rgba(255,255,255,1), rgba(224,224,224,1)); 
+	background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(224,224,224,1)); 
+	background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(224,224,224,1)); 
+
+
+}
+
+#container-wrapper{
+	width: 75%;
+	margin: 25px auto 0 auto;
+	text-align: center;
+	
+}
+
+#headliner, 
+#guessing_field, 
+#actions, 
+#guesses {
+	display: block;
+	padding: 25px;
+
+}
+
+
+#guessing_field{
+	width:50%;
+	margin: 0 auto 0 auto;
+	border-style: solid;
+	border-color:green;
+	border-radius: 25px;
+	box-shadow: 10px 10px 10px #777;
+}
+
+.form-control{
+	text-align: center;
+}
+
+.intheclear, .alert{
+	font-weight: bold;
+
+}
+.intheclear{
+	color:green;
+}
+
+.alert{
+	color:red;
+}
+
+@media (max-width: 460px) {
+
+	#actions button:nth-child(1){
+		margin-bottom:10px;
+
+
+	}

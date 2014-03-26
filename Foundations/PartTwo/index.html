@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+<head>
+	<style>
+		@import url('css/bootstrap-responsive.css') screen;
+		@import url('css/bootstrap.min.css') screen;
+		@import url('css/style.css') screen;
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>T's Guessing Game</title>
+</head>
+<body>
+	<div id="container-wrapper">
+
+		<div id="headliner">
+			<p><h1>T's Guessing Game</h1></p>
+			<p class="lead">Pick a number. I'll tell you if you're hot or cold. You have 5 tries to guess the correct answer. </p>
+		</div>
+		<div id="guessing_field">
+			<p>Are you ready for this?</p>
+			<p>
+			<input type="text" class="form-control" placeholder="Guess a number 1-100"> <br>
+			<button type="button" id="playersGuess" onclick="doesNumberToGuessExist()" class="btn btn-info btn-small">Submit Your Guess</button>
+		</p>
+		</div>
+		<div id="actions">
+			<p>
+				<button type="button" class="btn btn-warning btn-large">I need a hint!</button>
+				<button type="button" class="btn btn-danger btn-large">Play Again</button>
+			</p>
+		</div>
+		<div id="guesses">
+			<p class="lead">Guesses Remaining: <span class="intheclear">5</span></p>
+		</div>
+	</div> <!-- Container -->
+
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
