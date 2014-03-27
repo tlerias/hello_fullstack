@@ -17,10 +17,14 @@ body{
 #headliner, 
 #guessing_field, 
 #actions, 
-#guesses {
+#guessesleft {
 	display: block;
 	padding: 25px;
 
+}
+
+#guessesleft{
+	padding:25px;
 }
 
 

@@ -1,0 +1,13 @@
+var allGuesses = [], hotOrCold = [], goalNumber = Math.floor(100 * Math.random() + 1);
+allGuesses.push(goalNumber);
+
+function submitNumberToGuesses()
+{
+	var currentGuess = parseInt(document.getElementById("playersGuess").value
+
+}
+document.ready(function(){
+
+
+
+});

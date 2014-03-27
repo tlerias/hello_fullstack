@@ -1,0 +1,20 @@
+When a game begins, there should be a random number generated between 1-100.
+The user should have an input field where they can submit a guess.
+After the user submits a guess, indicate whether their guess is 'hot' or 'cold'. Let the user know if they need to guess higher or lower.
+Allow the user to guess only a certain amount of times. When they run out of guesses let them know the game is over.
+Feel free to use prompts to get user input on your first version.
+For the final version of your project, you'll need to create an HTML-based interface for getting user inputs and giving feedback on guesses.
+Validate inputs that they are real numbers between 1-100.
+Create a new game button that resets the game.
+Store all of the guesses and create a way to check if the guess is a repeat.
+Track the user's previous guess. Let them know if they are getting “hotter” or “colder” based on their previous guess.
+
+
+When a user enters the page, a number is generated between the numbers 1 - 100. We store this number into an array.
+
+A user enters a number and hits submit. Validate the numbers. We store that number into the array. If the number is  10 - 5 numbers either higher or lower, we tell them that they are warm. If it is less than 5 away we tell them that they are hot. All other numbers are colder. We also tell them if they have to guess higher or lower. We store whther they are hot or cold into another array. On their second or higher guess we tell them whether they are hotter or colder than their previous guess.
+
+They get 5 total tries, we store each try into the array to check to see if it has been guess before. Game is over after 5 incorrect guesses.
+
+They can create a new game that resets the game.
+

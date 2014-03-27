@@ -1,6 +1,6 @@
-<!Doctype html>
-<html>
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///Users/tlerias/hello_fullstack/Foundations/PartTwo/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<style>
 		@import url('css/bootstrap-responsive.css') screen;
 		@import url('css/bootstrap.min.css') screen;
@@ -13,29 +13,31 @@
 	<div id="container-wrapper">
 
 		<div id="headliner">
-			<p><h1>T's Guessing Game</h1></p>
-			<p class="lead">Pick a number. I'll tell you if you're hot or cold. You have 5 tries to guess the correct answer. </p>
+			<p></p><h1>T's Guessing Game</h1><p></p>
+			<p>Pick a number. I'll tell you if you're hot or cold. You have 5 tries to guess the correct answer. </p>
 		</div>
 		<div id="guessing_field">
-			<p>Are you ready for this?</p>
+			<p span id="result" class = "lead">Are you ready for this?</p>
 			<p>
 			<input type="text" class="form-control" placeholder="Guess a number 1-100"> <br>
-			<button type="button" id="playersGuess" onclick="doesNumberToGuessExist()" class="btn btn-info btn-small">Submit Your Guess</button>
+			<button type="button" id="playersGuess" onclick="submitNumberToGuesses()" class="btn btn-info btn-small">Submit Your Guess</button>
 		</p>
 		</div>
-		<div id="actions">
+		<div id="guessesleft">
+			
+		<p class="lead">Guesses Remaining: <span id = "guesses" class="intheclear">5</span></p></div><div id="actions">
 			<p>
 				<button type="button" class="btn btn-warning btn-large">I need a hint!</button>
 				<button type="button" class="btn btn-danger btn-large">Play Again</button>
 			</p>
 		</div>
-		<div id="guesses">
-			<p class="lead">Guesses Remaining: <span class="intheclear">5</span></p>
-		</div>
+		
 	</div> <!-- Container -->
 
 
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-</body>
-</html>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+</body></html>

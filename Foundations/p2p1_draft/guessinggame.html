@@ -1,3 +1,18 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+
+<body>
+<p id="result">Guess a Number:</p>
+<input type="text" placeholder="Guess a number 1-100"> <br>
+<button type="button" id="playersGuess" onclick="submitNumberToGuesses()">Guess</button>
+<p>Remaining guesses: <span id="guesses">5</span></p>
+
+ <script src="js/jquery-1.9.1.min.js"></script>
+
+<script>
+
 var guesses = 5;
 var goalNumber = numberRandomizer();
 var currentGuess = submitNumberToGuesses();
@@ -21,7 +36,7 @@ function correct(){
 }
 
 function incorrect(){
-  $("#result").html("<b>" + hotOrCold + "</b>");
+  $("#result").html("Sorry, you are incorrect." + hotOrCold);
     guesses--;
    document.getElementById("guesses").innerHTML = guesses;
     if (guesses == 0){
@@ -46,3 +61,8 @@ else{
 	incorrect();
 
 };
+</script>
+
+</body>
+</html>
+
