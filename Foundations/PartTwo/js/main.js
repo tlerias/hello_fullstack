@@ -2,18 +2,18 @@ var guesses = 5;
 var goalNumber = numberRandomizer();
 var currentGuess = submitNumberToGuesses();
 var hotOrCold = isHotOrCold();
-
+// window.onload(startOver());
 
 function numberRandomizer()
 {
-	goalNumber = Math.floor(100 * Math.random() + 1);
-	return goalNumber;
+	return Math.floor(100 * Math.random() + 1);
+	
 }
 
 function submitNumberToGuesses()
 {
-	currentGuess = parseInt(document.getElementById("playersGuess").value, 10);
-	return currentGuess;
+	return parseInt(document.getElementById("playersGuess").value, 10);
+	
 }
 
 function correct(){
@@ -25,7 +25,7 @@ function incorrect(){
     guesses--;
    document.getElementById("guesses").innerHTML = guesses;
     if (guesses == 0){
-     $("#result").html("Sorry, you lose"); 
+     $("#result").html("Sorry, you lose. "); 
    }
 }
 
@@ -38,6 +38,18 @@ function isHotOrCold(){
 function higherOrLower() {
     return currentGuess  > goalNumber ? "Your guess was too high." : "Your guess was too low.";
 }
+
+function giveUp(){
+	$("#result").html("Sorry, you lose. The answer was <b>" + goalNumber + "</b>");
+}
+
+function startOver(){
+	guesses = 5;
+	numberRandomizer();
+	document.getElementById("guesses").innerHTML = guesses;
+	$("#result").html("Are you ready?");
+}
+
 
 if (currentGuess === goalNumber){
 	correct();
