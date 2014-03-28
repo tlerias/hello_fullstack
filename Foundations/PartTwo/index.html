@@ -20,15 +20,17 @@
 			<p span id="result" class = "lead">Are you ready for this?</p>
 			<p>
 			<input type="text" class="form-control small-input" placeholder="1-100"> <br>
-			<button type="button" id="playersGuess" onclick="submitNumberToGuesses()" class="btn btn-info btn-small">Submit Your Guess</button>
-		</p>
+			<button type="button" id="playersGuess" class="btn btn-info btn-small">Submit Your Guess</button>
+			</p>
+		<div id="hint"></div>
 		</div>
 		<div id="guessesleft">
 			
-		<p class="lead">Guesses Remaining: <span id="guesses" class="intheclear">5</span></p></div><div id="actions">
+		<p class="lead">Guesses Remaining: <span id="guesses" class="intheclear">5</span></p></div>
+		<div id="actions">
 			<p>
-				<button type="button" onclick="giveUp()" class="btn btn-warning btn-large">I Give Up!</button>
-				<button type="button" onclick="startOver()" class="btn btn-danger btn-large">Play Again</button>
+				<button type="button" class="give-up btn btn-warning btn-large">I Give Up!</button>
+				<button type="button" class="play-again btn btn-danger btn-large">Play Again</button>
 			</p>
 		</div>
 		
