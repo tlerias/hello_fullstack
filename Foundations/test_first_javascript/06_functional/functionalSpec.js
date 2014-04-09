@@ -1,4 +1,4 @@
-describe("countWords", function() {
+ describe("countWords", function() {
   it("counts words in a sentence separated by empty space", function() {
     expect(countWords("this is a sentence with 7 words")).toEqual(7);
   });
@@ -44,6 +44,7 @@ describe("map", function() {
     expect(map([1,2,3], function(elem) { return elem * 3; })).toEqual([3,6,9]);
   });
 });
+
 
 // filter takes a collection and a function and filters the collection using that function
 // based on the boolean return value of the function
