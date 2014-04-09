@@ -1,11 +1,8 @@
-function Calculator(){
-	// i would make a separate array and a separate total for now
-	total = [0];
-	totalSum = 0;
-	// so instead of putting something on the prototype you can put it straight on calculator itself, so you could do it like this...
-}
+function Calculator() {
+	this.total = [0];
+};
 
-Calculator.protoype = {
+Calculator.prototype = {
 	value: function(){
 		return this.total[this.total.length - 1];
 	},
@@ -16,7 +13,25 @@ Calculator.protoype = {
 	},
 
 	plus: function(){
-		return this.total.push(this.total.pop()  + this.total.pop());
+		this.total.push(this.pop()  + this.pop());
+	},
+
+	minus: function(){
+		var val1 = this.pop();
+		var val2 = this.pop();
+
+		this.total.push(val2 - val1);
+	},
+
+	divide: function(){
+		var val1 = this.pop();
+		var val2 = this.pop();
+
+		this.total.push(val2 / val1);
+	},
+
+	times: function(){
+		this.total.push(this.pop() * this.pop())
 	},
 
 	push: function(num){
@@ -33,6 +48,7 @@ Calculator.protoype = {
 
 	}
 }
+
 
 
 	// check out this link http://www.meta-calculator.com/learning-lab/reverse-polish-notation-calculator.php this should be a better visual on rpns
