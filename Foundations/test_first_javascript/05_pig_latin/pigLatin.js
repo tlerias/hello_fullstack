@@ -1,33 +1,14 @@
 function translate(string){
-	var ay = "ay"
 	
-	if (/[aeiouAEIOU]/.test(string[0])){
-		return string.concat(ay)
-
-	}
-	else if (/[bcdfghjklmnpqrstvwxz]/.test(string[0].toLowerCase())){
-		var arrString = string.split('');
-		for (var i = 0; i <= arrString.length; i++){
-			if (/[bcdfghjklmnpqrstvwxz]/.test(arrString[0].toLowerCase())){
-				arrString.push(arrString.shift());
-
+	var array = string.split(" ");
+	for (var i = 0; i < array.length; i++){
+			if (/[aeiouAEIOU]/.test(array[i][0])){
+			 array[i] = array[i].concat("ay")
 			}
-		else {
-
-			break;
 		}
-}
+	string = array.join(" ");
 
-		string = arrString.join('');
-		return string.concat(ay)
-	}
+	return string.replace(/\b([b-df-hj-np-tv-z(qu)]+)(\w+)\b/g, '$2$1ay');
+
 
 }
-translate("apple");
-translate("banana");
-translate("cherry");
-translate("eat pie");
-translate("three");
-translate("quiet");
-translate("square");
-translate("the quick brown fox");
