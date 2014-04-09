@@ -9,6 +9,4 @@ function translate(string){
 	string = array.join(" ");
 
 	return string.replace(/\b([b-df-hj-np-tv-z(qu)]+)(\w+)\b/g, '$2$1ay');
-
-
 }
