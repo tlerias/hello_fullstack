@@ -46,17 +46,16 @@ function contains(collection, val){
 }
 
 function reduce(array, startVal, combo){
-	var sum = 0;
 
-	for (var i = startVal; i < array.length; i++){
-		sum = combo(sum, array[i]);
-	}
-	return sum
+	forEach(array, function(element) {
+		startVal = combo(startVal, element);
+	});
+	return startVal
 
 }
 
-var countWordsInReduce = function (one, array){
-	return one + countWords(array)
+var countWordsInReduce = function (startCount, wordArray){
+	return startCount + countWords(wordArray)
 }; //i'm not sure why this worked
 
 function sum(ints){
@@ -67,10 +66,45 @@ function sum(ints){
 }
 
 function every(array, func){
-	if (func()){
-		return true
+	for (var i = 0; i < array.length; i++){
+		if(!func(array[i])){
+			return false
+		}
+
 	}
-	return false
+	return true
+
 }
+
+function any(collection, testFunc){
+	if (typeof testFunc === "undefined"){
+		testFunc = function(item){
+			return item
+		}
+	}
+	return reduce(collection, false, function(isTrue, item) {
+		if (isTrue){
+			return true;
+		}
+		return testFunc(item);
+	});
+}
+
+function once(func){
+	var sum = 0;
+	return function(){
+		if (sum == 0){
+			func();
+		}
+		sum++;
+	}
+}
+
+function wrapper(func, funcWrap){
+	return function(){
+		return funcWrap(func)
+	}
+}
+
 
 
