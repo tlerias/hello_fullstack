@@ -56,7 +56,7 @@ function reduce(array, startVal, combo){
 
 var countWordsInReduce = function (startCount, wordArray){
 	return startCount + countWords(wordArray)
-}; //i'm not sure why this worked
+};
 
 function sum(ints){
 	return reduce(ints, 0 , function(a, b){
