@@ -7,14 +7,27 @@ function c2f(tempC){
 }
 
 function Temperature(temp){
-  var tempF = temp;
-	this.fahrenheit = function(temp){
-		t = temp;
-	},
-  this.setFahrenheit = function(temp){
-		f = temp;
-		}
-	}
+  var f = temp;
+  var c;
+  this.fahrenheit = function(){
+    if (f === undefined){
+       return f = c2f(c);
+    }
+    return f;
+  };
+  this.celcius = function(){
+    if (c === undefined){
+       return c = f2c(f);
+    }
+    return c;
+  };
+
+  this.setFahrenheit = function(fahrenheitDegrees){
+    f = fahrenheitDegrees
+  }
+  this.setCelcius = function(celciusDegrees){
+    c = celciusDegrees;
+  }
 
 }
 
